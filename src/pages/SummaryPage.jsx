@@ -1,3 +1,7 @@
 export const SummaryPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h2></h2>
+    </div>
+  );
 };
