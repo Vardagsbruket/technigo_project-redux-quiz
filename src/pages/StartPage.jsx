@@ -1,16 +1,20 @@
 import { useDispatch } from "react-redux";
 import { quizTimerStart } from "../reducers/quiz";
 import "./startPage.css";
+import { useState } from "react";
 
 export const StartPage = () => {
   //const handleQuizTimer
   const dispatch = useDispatch();
- const handleStartQuiz = () =>{
-    dispatch(quizTimerStart(true))
-  }
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleStartQuiz = () => {
+    dispatch(quizTimerStart(true));
+    setIsVisible(false);
+  };
 
   return (
-    <div className="startPage">
+    <div className={`startPage ${isVisible ? "" : "hidden"}`}>
       <h1>Welcome to our quiz!</h1>
       <div className="quizInfo">
         <p>Some info about the quiz... 🤔</p>

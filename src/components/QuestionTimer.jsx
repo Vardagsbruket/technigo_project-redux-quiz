@@ -24,7 +24,6 @@ export const QuestionTimer = () => {
   const loosePoint = () => {
     setTimeIsUp(true);
     clearInterval(intervalRef.current);
-    //handleTimeRanOut();
   };
 
   useEffect(() => {
@@ -49,14 +48,23 @@ export const QuestionTimer = () => {
   useEffect(() => {
     if (timeIsUp) {
       incorrect = selectAnswer();
-      dispatch(submitAnswer({ questionId: index.id, answerIndex: incorrect }));
+      setTimeout(() => {
+        dispatch(
+          submitAnswer({ questionId: index.id, answerIndex: incorrect })
+        );
+      }, 1500);
     }
   }, [timeIsUp]);
 
   return (
     <div>
       <p>Time left: {timeLeft}</p>
-      {timeIsUp && <h3>Time ran out! You lost a point 😞</h3>}
+      {timeIsUp && (
+        <h3>
+          Time ran out! You lost a point and your answer will be logged as
+          incorrect 😞
+        </h3>
+      )}
     </div>
   );
 };
