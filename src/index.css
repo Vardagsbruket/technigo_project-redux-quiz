@@ -15,4 +15,6 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
+  max-width: 800px;
+  width: 100%;
 }

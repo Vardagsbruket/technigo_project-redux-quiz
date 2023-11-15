@@ -2,10 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 800px;
-  width: 100%;
+
   text-align: center;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 .questionText {
   display: flex;
