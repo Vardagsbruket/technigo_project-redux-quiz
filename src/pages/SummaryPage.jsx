@@ -1,7 +1,9 @@
+import { ScoreCounter } from "../components/ScoreCounter";
+
 export const SummaryPage = () => {
   return (
     <div>
-      <h2></h2>
+      <ScoreCounter />
     </div>
   );
 };

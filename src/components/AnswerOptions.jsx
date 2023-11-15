@@ -12,7 +12,6 @@ export const AnswerOptions = () => {
     dispatch(
       submitAnswer({ questionId: answerOptions.id, answerIndex: answer })
     );
-    //dispatch(goToQuestionFeedback());
   };
 
   return (
