@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import { ScoreCounter } from "../components/ScoreCounter";
 import { restart } from "../reducers/quiz";
 import "./summaryPage.css";
