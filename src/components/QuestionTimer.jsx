@@ -39,17 +39,8 @@ export const QuestionTimer = () => {
     return () => clearInterval(intervalRef.current);
   }, [timeLeft]);
 
-  // const selectAnswer = () => {
-  //   if (answer >= 0 && answer < 3) {
-  //     // console.log("return index answer", answer + 1);
-  //     return answer + 1;
-  //   } else return answer - 1;
-  // };
-
-  //let incorrect;
   useEffect(() => {
     if (timeIsUp) {
-      //incorrect = selectAnswer();
       dispatch(
         submitAnswer({
           questionId: index.id,

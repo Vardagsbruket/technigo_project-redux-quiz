@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 // Change these to your own questions!
 const questions = [
@@ -49,10 +49,11 @@ const initialState = {
   currentQuestionIndex: 0,
   quizOver: false,
   quizTimerState: false,
+ 
 };
 
 export const quiz = createSlice({
-  name: "quiz",
+  name: 'quiz',
   initialState,
   reducers: {
     /**
@@ -72,11 +73,11 @@ export const quiz = createSlice({
      */
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
-      const question = state.questions.find((q) => q.id === questionId);
+      const question = state.questions.find(q => q.id === questionId);
 
       if (!question) {
         throw new Error(
-          "Could not find question! Check to make sure you are passing the question id correctly."
+          'Could not find question! Check to make sure you are passing the question id correctly.'
         );
       }
 
@@ -102,7 +103,7 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    goToNextQuestion: (state) => {
+    goToNextQuestion: state => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true;
         state.quizTimerState = false;
@@ -118,20 +119,16 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    quizTimerStart: (state) => {
+    quizTimerStart:state =>{
       state.quizTimerState = true;
-    },
 
+    },
+ 
     restart: () => {
       return initialState;
     },
   },
 });
 
-export const {
-  submitAnswer,
-  goToNextQuestion,
-  goToQuestionFeedback,
-  quizTimerStart,
-  restart,
-} = quiz.actions;
+export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, quizTimerStart,restart } =
+  quiz.actions;

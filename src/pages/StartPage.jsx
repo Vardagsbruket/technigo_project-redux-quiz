@@ -6,7 +6,7 @@ import './startPage.css';
 export const StartPage = () => {
   const dispatch = useDispatch();
   const handleStartQuiz = () => {
-    dispatch(quizTimerStart(true));
+    dispatch(quizTimerStart()); //make it true
   };
 
   const quizState = useSelector(state => state.quiz);
@@ -14,8 +14,8 @@ export const StartPage = () => {
   const quizTimerState = quizState.quizTimerState;
 
   const showStartPage = !quizOver && !quizTimerState;
-
-  if (!showStartPage) {
+  
+  if (!showStartPage  ) {
     return <></>;
   }
 

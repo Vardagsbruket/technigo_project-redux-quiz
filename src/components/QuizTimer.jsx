@@ -8,7 +8,7 @@ export const QuizTimer = () => {
   const start = useSelector((state) => state.quiz.quizTimerState);
 
   const getTime = () => {
-    setTimer((prevTimer) => prevTimer + 1000); // Increment by 1000 milliseconds
+    setTimer((prevTimer) => prevTimer + 1000); 
 
     const newMinutes = Math.floor((timer / 1000 / 60) % 60);
     const newSeconds = Math.floor((timer / 1000) % 60);
@@ -28,8 +28,8 @@ export const QuizTimer = () => {
   }, [timer, start]);
 
   return (
-    <div>
-      Timer: {minutes} minutes {seconds} seconds
-    </div>
+    <>
+       {minutes} minutes {seconds} seconds
+    </>
   );
 };
