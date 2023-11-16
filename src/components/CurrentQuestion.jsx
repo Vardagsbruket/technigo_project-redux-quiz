@@ -8,11 +8,11 @@ export const CurrentQuestion = () => {
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>;
   }
-  //console.log(question);
 
   return (
     <div className="questionText">
       <h2>{question.questionText}</h2>
+      <img src={`./` + question.id + `.jpg`} />;
     </div>
   );
 };
