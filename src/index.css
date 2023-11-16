@@ -38,6 +38,12 @@ button {
   font-size: 16px;
   font-weight: 600;
 }
+h1 {
+  font-size: 34px;
+}
+h2 {
+  text-align: center;
+}
 p {
   margin: 5px;
 }

@@ -16,10 +16,10 @@ export const SummaryPage = () => {
   };
   return (
     <div className="summaryContainer">
-      <h1>You finished the quiz, well done! 🏆</h1>
-      <h2>
+      <h2>You finished the quiz, well done! 🏆</h2>
+      <h3>
         Total points: <ScoreCounter />{" "}
-      </h2>
+      </h3>
       <ul>
         {answers.map(({ questionId, isCorrect, answerIndex }) => (
           <li key={questionId}>
