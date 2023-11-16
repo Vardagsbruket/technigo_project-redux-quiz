@@ -11,7 +11,7 @@ export const SummaryPage = () => {
 
   const questions = useSelector((state) => state.quiz.questions);
 
-  const handleShowSummary = () => {
+  const handleRestart = () => {
     dispatch(restart());
   };
   return (
@@ -23,9 +23,8 @@ export const SummaryPage = () => {
       <ul>
         {answers.map(({ questionId, isCorrect, answerIndex }) => (
           <li key={questionId}>
-            <p className={isCorrect ? "green" : "red"}>
+            <p>
               {`
-          
               ${questionId}: 
               ${
                 questions.filter(({ id }) => id === questionId)[0].questionText
@@ -38,7 +37,7 @@ export const SummaryPage = () => {
         ))}
       </ul>
 
-      <button onClick={handleShowSummary}>Try again?</button>
+      <button onClick={handleRestart}>Try again?</button>
     </div>
   );
 };
