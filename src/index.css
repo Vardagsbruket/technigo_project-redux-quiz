@@ -15,19 +15,25 @@ code {
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto;
   background-color: rgb(17, 41, 107);
-  padding: 50px;
+  padding: 20px;
 }
 
 .main {
-  /* max-width: 550px;
-  width: 100vw; */
+  max-width: 650px;
+  width: 100vw;
+  min-height: calc(100vh - 50px);
+  margin-bottom: 20px;
+  background-color: rgb(237, 237, 237);
+  margin-top: 20px;
   background-color: rgb(237, 237, 237);
   margin: auto;
   color: rgb(17, 41, 107);
   font-family: "Montserrat", sans-serif;
 }
+
 button {
   width: 200px;
   height: 35px;
@@ -73,6 +79,9 @@ p {
 @media (min-width: 550px) and (max-width: 666px) {
   .questionPage {
     min-height: 550px;
+  }
+  .main {
+    width: 80vw;
   }
 }
 @media (min-width: 667px) {

@@ -39,5 +39,6 @@ export const SummaryPage = () => {
 
       <button onClick={handleRestart}>Try again?</button>
     </div>
+    
   );
 };
